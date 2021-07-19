@@ -49,7 +49,7 @@ span{
 .panel p{
     font-size: 28px;
     width: 200px;
-    height: 200px;
+    height: 180px;
     text-align: center;
     border-radius: 10px;
     
@@ -77,6 +77,7 @@ span{
     color: #fff;
     font-size: 25px;
     width: 80%;
+    height: 80%;
     margin: 0 auto;
     padding: 30px 0;
     border-radius: 10px;
@@ -96,7 +97,7 @@ span{
     width: 55%;
     height: 90px;
     font-size: 50px;
-    margin-top: 25px;
+    margin-top: 5px;
     border-radius:10px;
     border-style: none;
     border: 5 px solid green;
@@ -110,7 +111,7 @@ span{
     height: 50px;
     font-size: 25px;
     margin-top: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     border-radius:10px;
     border-style: none;
     border: 5 px solid green;
