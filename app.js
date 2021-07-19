@@ -61,7 +61,7 @@ function evaluateUserGuess(){
         } else if (guessCount === 5) {
             lastResult.textContent = `Game Over. You lost!!!  `
             lastResult.style.backgroundColor = 'tomato';
-            adjustYourGuess.textContent = `My number was ${randomNumber} UR Looser..`;
+            adjustYourGuess.textContent = `My number was ${randomNumber}. You're a Looser..`;
             // console.log('başarısız');
             setGameOver();
         } else {
