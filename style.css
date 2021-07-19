@@ -49,7 +49,7 @@ span{
 .panel p{
     font-size: 28px;
     width: 200px;
-    height: 180px;
+    height: 160px;
     text-align: center;
     border-radius: 10px;
     
@@ -59,7 +59,7 @@ span{
 }
 
 .upper p:last-child{
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .lower p:last-child{
@@ -95,7 +95,7 @@ span{
 .userInput{
     color: black;
     width: 55%;
-    height: 90px;
+    height: 80px;
     font-size: 50px;
     margin-top: 5px;
     border-radius:10px;
@@ -125,9 +125,9 @@ span{
 
 .adjustYourGuess{
     width:35%;
-    height:100px;
+    height:80px;
     border-radius: 10px;
-    padding-top: 20px;
+    padding-top: 10px;
     
 }
 
