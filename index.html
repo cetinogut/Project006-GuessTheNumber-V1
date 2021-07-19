@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GuessNumber</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Number Guessing Game</h1>
-    <div id="container">
-        <p>Guess a random number between 1-100</p>
-        <p>You have 5 attemps</p>
-        <div class="form">
-            <input type="text" class="userInput" id="txtUserInput" onkeypress="return isNumber(event)">
-            <!-- <input type="submit" class="userSubmit" id="btnSubmit" value="Submit" onClick="return validateUserInput()" > -->
-            <input type="submit" class="userSubmit" id="btnSubmit" value="Submit" >
+    <div class="bg-image"> </div>
+   <div class="container">
+        <h1>Number Guessing Game</h1>
+        <div class="gameArea">
+            <div class="panel upper ">
+                <p>Guess a random number between <span>1-100</span> </p>
+                <p>You have <span id="remainingAttempts"> </span>  attempts</p>
+            </div>
+            
+            <div class="form">
+                <input type="text" class="userInput" id="txtUserInput" onkeypress="return isNumber(event)"> <br>
+                <!-- <input type="submit" class="userSubmit" id="btnSubmit" value="Submit" onClick="return validateUserInput()" > -->
+                <input type="submit" class="userSubmit" id="btnSubmit" value="Submit" >
+                <div class="hint">Hint
+                    <span class="hintText"> </span>
+                </div>
+            </div>
+            <div class="lower-3-boxes">
+                <div class="panel lower resultsPanel">
+                    <p class="previousInputs"></p>
+                    <p class="lastResult"></p>
+                </div>
+                
+                <p class="adjustYourGuess" id="up-down"></p>
+                
+            </div>
+            
         </div>
-        <div class="resultsPanel">
-            <p class="previousInputs"></p>
-            <p class="lastResult"></p>
-            <p class="adjustYourGuess" id="up-down"></p>
-        </div>
-    </div>
+   </div>
+        
+    
+   
+    
 
     <script src="app.js"></script>
     <script>
