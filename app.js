@@ -1,4 +1,4 @@
-let randomNumber = Math.floor(Math.random() * 100) +1 ;
+let randomNumber; // = Math.floor(Math.random() * 100) +1 ;
 console.log({randomNumber});
 let previousInputs = document.querySelector('.previousInputs');
 console.log({previousInputs})
@@ -12,19 +12,17 @@ let userInput = document.querySelector('.userInput');
 let guessCount = 1;
 let resetButton;
 
+
+userSubmit.addEventListener('click', evaluateUserGuess);
+
 userInput.focus();
-function checkGuess(){
+generateNumberToGuess();
+console.log({randomNumber});
+
+function evaluateUserGuess(){
     let userGuess = Number(userInput.value);
-    console.log(userInput.innerHTML);
+   
     console.log({userGuess});
-
-    // if(!'userGuess'.match(/^[0-9]$/))
-    //         {
-    //         alert("Please only enter numeric characters only for your guess (Allowed input:0-9)")
-    //         }
-
-
-
 
     if(userGuess < 1 || userGuess > 100){
         //alert("Please enter a number between 1 and 100.");
@@ -43,12 +41,14 @@ function checkGuess(){
             lastResult.textContent = `Congrats!! Your guess was ${userGuess} and picked number was ${randomNumber} too. You win...`;
             lastResult.style.backgroundColor = 'green';
             adjustYourGuess.textContent = '';
+            console.log('başarılı');
             setGameOver();
     
         } else if (guessCount === 5) {
             lastResult.textContent = 'Game Over'
             lastResult.style.backgroundColor = 'tomato';
             adjustYourGuess.textContent = '';
+            console.log('başarısız');
             setGameOver();
         } else {
             lastResult.textContent = 'Your Guess is WRONG!!!'
@@ -60,7 +60,7 @@ function checkGuess(){
                 adjustYourGuess.textContent = 'Last guess was high. Adjust your guess down';
             }
         }
-    
+        console.log({guessCount})
         guessCount ++;
         userInput.value =  ''
         userInput.focus();
@@ -70,14 +70,55 @@ function checkGuess(){
     
 }
 
-userSubmit.addEventListener('click', checkGuess);
-
+function generateNumberToGuess(){
+    randomNumber = Math.floor(Math.random() * 100) +1 ;
+}
 function setGameOver(){
-    userInput.disabled = true;
-    userSubmit.disabled = true;
+    inputsDisabled();
     resetButton = document.createElement('button');
     resetButton.textContent = 'Play Again!';
     document.body.appendChild(resetButton);
-    resetButton.addEventListener('click', reserGame);
+    resetButton.addEventListener('click', resetGame);
 }
+
+function resetGame(){
+    guessCount = 1;
+    // let resetInfoPanel = document.querySelectorAll('.resultsPanel');
+    // console.log({resetInfoPanel})
+    // for (let i = 0; i < resetInfoPanel.length; i++) {
+    //     resetInfoPanel[i].textContent = '';
+    // }
+    cleanInfoPanel();
+
+    resetButton.parentNode.removeChild(resetButton);
+    inputsEnbled();
+    getCleanFocus()
+    //randomNumber = Math.floor(Math.random() * 100) +1 ;
+    generateNumberToGuess();
+    console.log({randomNumber})
+}
+
+function inputsDisabled(){
+    userInput.disabled = true;
+    userSubmit.disabled = true;
+}
+
+function inputsEnbled(){
+    userInput.disabled = false;
+    userSubmit.disabled = false;
+}
+
+function getCleanFocus() {
+    userInput.value = ''
+    userInput.focus();
+}
+
+function cleanInfoPanel(){
+    previousInputs.textContent = 'Previous Guesses: ';
+    lastResult.textContent = '';
+    adjustYourGuess.textContent = '';
+}
+
+
+
 
