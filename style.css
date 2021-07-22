@@ -8,8 +8,6 @@ body, html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     height: 100%;
-    
-   
 }
 
 .bg-image{
@@ -66,7 +64,6 @@ span{
 .container{
     display: flex;
     flex-direction: column;
-    
 }
 .gameArea{
     background-color: rgb(0,0,0); /* Fallback color */
@@ -160,7 +157,6 @@ button:hover{
     border-style: none;
     border: 5 px solid green;
     text-align: center;
-    
   }
   
   .hint .hintText {
@@ -256,14 +252,12 @@ button:hover{
     }
 
     p.previousInputs{
-        /* font-size: 30px; */
         width: 50%;
         margin-right: 2px;
     }
 
     p.lastResult{
-        /* font-size: 30px; */
-        width: 50%;
+       width: 50%;
     }
     .hint {
         position: relative;
@@ -287,5 +281,3 @@ button:hover{
             left: 33%;
         }
     }
-
-  }
