@@ -29,10 +29,10 @@ h1{
     left: 33%;
     background-color: rgb(218, 215, 44);
     color: rgb(105, 43, 7);
-    font-size: 50px;
+    font-size: 40px;
     /* border-radius: 10px; */
-    outline: 10px solid blueviolet;
-    padding-bottom: 10px;
+    outline: 5px solid blueviolet;
+    padding-bottom: 5px;
 
 }
 span{
@@ -47,9 +47,9 @@ span{
     align-items:center; 
 }
 .panel p{
-    font-size: 28px;
+    font-size: 25px;
     width: 200px;
-    height: 160px;
+    height: 120px;
     text-align: center;
     border-radius: 10px;
     
@@ -58,12 +58,12 @@ span{
     border: 1px solid yellow;
 }
 
-.upper p:last-child{
-    padding-top: 30px;
+.upper p{
+    padding-top: 10px;
 }
 
-.lower p:last-child{
-    padding-top: 50px;
+.lower p{
+    padding-top: 20px;
 }
 
 .container{
@@ -75,7 +75,7 @@ span{
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     width: 80%;
     height: 80%;
     margin: 0 auto;
@@ -110,25 +110,22 @@ span{
     width: 51%;
     height: 50px;
     font-size: 25px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 5px;
     border-radius:10px;
     border-style: none;
-    border: 5 px solid green;
     text-align: center;
 }
 .userSubmit:hover{
     cursor: pointer;
     background-color: green;
-
 }
 
 .adjustYourGuess{
     width:35%;
-    height:80px;
+    height:60px;
     border-radius: 10px;
-    padding-top: 10px;
-    
+    padding-top: 5px;
 }
 
 .lower-3-boxes{
@@ -142,7 +139,7 @@ span{
 button{
     background-color: blueviolet;
     color: white;
-    height: 50px;
+    height: 40px;
     font-size: 25px;
     margin-top: 5px;
     border-radius:10px;
