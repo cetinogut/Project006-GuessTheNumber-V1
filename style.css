@@ -125,7 +125,7 @@ span{
     width:35%;
     height:60px;
     border-radius: 10px;
-    padding-top: 5px;
+    padding-top: 8px;
 }
 
 .lower-3-boxes{
@@ -203,3 +203,4 @@ button:hover{
     visibility: visible;
     opacity: 1;
   }
+  

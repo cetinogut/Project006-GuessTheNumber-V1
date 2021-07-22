@@ -11,6 +11,7 @@ let userSubmit = document.querySelector('.userSubmit');
 let userInput = document.querySelector('.userInput');
 let hintText = document.querySelector('.hintText');
 let hint = document.querySelector('.hint');
+let firstGuess = 0; // will bu used to give a hint
 let remainingAttemptsText =document.querySelector('#remainingAttempts');
 let remainingAttempts = 5;
 let guessCount = 1;
@@ -43,6 +44,7 @@ function evaluateUserGuess(){
             //previousInputs.textContent = 'Previous Guesses: ';
             previousInputs.innerHTML = 'Previous Guesses: '; //just to show use of innerHTML. But prefer tectContent which is more fast and secure
             previousInputs.style.backgroundColor = '#4285F4';
+            firstGuess = userGuess; // assigned to give a hint based on the first guess at the last chance.
             
         }
         previousInputs.textContent += userGuess + ' ';
@@ -81,7 +83,7 @@ function evaluateUserGuess(){
             setHintText();
             adjustYourGuess.style.backgroundColor = 'blueviolet';
         }
-        console.log({guessCount})
+        //console.log({guessCount})
         guessCount ++;
         remainingAttempts--;
         setRemainingAttemptsText();
@@ -107,6 +109,7 @@ function setGameOver(){
 function resetGame(){
     guessCount = 1;
     remainingAttempts = 5;
+    firstGuess = 0;
     
     cleanInfoPanel();
 
@@ -151,7 +154,11 @@ function setRemainingAttemptsText(){
 
 function setHintText(){
     if(remainingAttempts < 3){
-        hintText.textContent = randomNumber.toString();
+        //hintText.textContent = randomNumber.toString(); // this was a hint directly giving the random number .. I changed it to force user some simple math below.
+        (randomNumber > firstGuess) ? 
+        hintText.textContent = `Add ${randomNumber-firstGuess} to your first guess` :
+        hintText.textContent = `Subtract ${firstGuess - randomNumber} from your first guess`;
+        
         hint.style.backgroundColor= 'green';
         return;
     }
