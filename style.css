@@ -56,9 +56,6 @@ span{
 }
 .upper p{
     border: 1px solid yellow;
-}
-
-.upper p{
     padding-top: 10px;
 }
 
@@ -87,10 +84,7 @@ span{
     transform: translate(-50%, -50%);
     z-index: 2;
     margin-top: 10px;
-    
-    
 }
-
 
 .userInput{
     color: black;
@@ -115,6 +109,7 @@ span{
     border-radius:10px;
     border-style: none;
     text-align: center;
+    flex-grow: 4;
 }
 .userSubmit:hover{
     cursor: pointer;
@@ -134,7 +129,6 @@ span{
     justify-content: center;
     align-items: center;
 }
-
 
 button{
     background-color: blueviolet;
@@ -161,9 +155,7 @@ button:hover{
     background-color:goldenrod;
     height: 50px;
     font-size: 15px;
-    padding-top: 14px;
-    padding-left: 3px;
-    padding: 14px  3px 0px 3px;
+    padding: 16px  3px 0px 3px;
     border-radius:10px;
     border-style: none;
     border: 5 px solid green;
@@ -203,4 +195,97 @@ button:hover{
     visibility: visible;
     opacity: 1;
   }
+  .submit-hint{
+      width:55%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+  }
   
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    h1{
+        left: 20%;
+        background-color: rgb(218, 215, 44);
+        color: rgb(105, 43, 7);
+        font-size: 20px;
+        outline: 5px solid blueviolet;
+        padding-bottom: 5px;
+    }
+    .panel p{
+        font-size: 15px;
+        width: 200px;
+        height: 80px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .gameArea{
+        font-size: 15px;
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+        padding: 10px 0;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        margin-top: 10px;
+    }
+
+    .userInput{
+        width: 98%;
+    }
+    
+    .userSubmit{
+        width: 81%;
+    }
+    .adjustYourGuess{
+        width:98%;
+        height:45px;
+        border-radius: 10px;
+        padding-top: 3px;
+    }
+    lower{
+        display: flex;
+        flex-direction: column;
+    }
+
+    p.previousInputs{
+        /* font-size: 30px; */
+        width: 50%;
+        margin-right: 2px;
+    }
+
+    p.lastResult{
+        /* font-size: 30px; */
+        width: 50%;
+    }
+    .hint {
+        position: relative;
+        display: inline-block;
+        background-color:goldenrod;
+        height: 50px;
+        font-size: 15px;
+        padding: 18px  3px 0px 3px;
+        border-radius:10px;
+        border-style: none;
+        border: 5 px solid green;
+        text-align: center;
+      }
+      .submit-hint{
+        width:98%;
+      }
+        button{
+            height: 30px;
+            font-size: 20px;
+            bottom: 3px;
+            left: 33%;
+        }
+    }
+
+  }
